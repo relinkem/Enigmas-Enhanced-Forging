@@ -27,7 +27,9 @@ Refinery: click the top of the refinery for the Softtissue box, the front for th
 
 ## Download
 
-Install from Thunderstore with r2modman or the Thunderstore app once it is listed there. Until then, download the zip from the [GitHub releases page](https://github.com/relinkem/Enigmas-Enhanced-Forging/releases) and put the DLL in `BepInEx/plugins`. [Jotunn](https://thunderstore.io/c/valheim/p/ValheimModding/Jotunn/) and BepInExPack Valheim are required.
+Install from Thunderstore with r2modman or the Thunderstore app. Dependencies are installed automatically.
+
+Manual install: get the zip from the [Release folder on GitHub](https://github.com/relinkem/Enigmas-Enhanced-Forging/tree/main/Release) and put `EnigmasEnhancedForging.dll` in `BepInEx/plugins`. You also need [BepInExPack Valheim](https://thunderstore.io/c/valheim/p/denikson/BepInExPack_Valheim/) and [Jotunn](https://thunderstore.io/c/valheim/p/ValheimModding/Jotunn/).
 
 To change settings in game, install Configuration Manager and press F1.
 
