@@ -6,6 +6,32 @@ Smelters, kilns and the Eitr Refinery turn into machines you fill up and walk aw
 
 **This is an early, work in progress release.** The Smelter, Charcoal Kiln, Blast Furnace and Eitr Refinery are done. The Spinning Wheel, Windmill and Frost Kiln still work like vanilla and will be added in later versions.
 
+![A Blast Furnace, a Smelter and a Charcoal Kiln standing together in a meadow](https://raw.githubusercontent.com/relinkem/Enigmas-Enhanced-Forging/main/images/hero.jpg)
+
+## What it looks like
+
+### Station screens
+
+![The Blast Furnace screen lighting up, glowing while it works, and cooling down](https://raw.githubusercontent.com/relinkem/Enigmas-Enhanced-Forging/main/images/flame-window.gif)
+
+Input, Coal and Output rows, a Light and Douse button, and Take and Stack on the side. The window glows while the machine is hot and fades as it cools.
+
+### Winding animation
+
+![A Blast Furnace running at full speed, then slowly winding down to a stop](https://raw.githubusercontent.com/relinkem/Enigmas-Enhanced-Forging/main/images/animation-cycle.gif)
+
+The wheel runs at full speed, then slows over the cool-down and finishes one last gentle turn before it stops. The middle of this clip is sped up.
+
+### Eitr Refinery
+
+![The Eitr Refinery main window with Softtissue, Sap and Eitr rows](https://raw.githubusercontent.com/relinkem/Enigmas-Enhanced-Forging/main/images/refinery-main.jpg)
+
+The main window shows everything and takes only the Eitr out. Click the top of the refinery for the Softtissue box, or the front for the Sap box.
+
+![The Sap box of the Eitr Refinery](https://raw.githubusercontent.com/relinkem/Enigmas-Enhanced-Forging/main/images/refinery-sap.jpg)
+
+![The Softtissue box of the Eitr Refinery](https://raw.githubusercontent.com/relinkem/Enigmas-Enhanced-Forging/main/images/refinery-softtissue.jpg)
+
 ## Features
 
 - **Inventory screens instead of switches.** Open a Smelter, Charcoal Kiln or Blast Furnace and you get a grid with an Input row, a Coal row and an Output row. The Eitr Refinery gets a Softtissue box, a Sap box and a main window for the Eitr.
