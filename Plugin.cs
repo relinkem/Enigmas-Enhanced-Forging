@@ -16,7 +16,7 @@ namespace EnigmasEnhancedForging
         // Must match the GUID that Enigma's Item Salvager checks for (MetalScrapHook.cs).
         public const string PluginGuid = "EnigmaPrime.EnigmasEnhancedForging";
         public const string PluginName = "Enigma's Enhanced Forging";
-        public const string PluginVersion = "0.0.1";
+        public const string PluginVersion = "0.1.0";
 
         internal static ManualLogSource Log;
         private Harmony _harmony;
