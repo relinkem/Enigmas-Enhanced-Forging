@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.0.1
+## 0.1.0
 First public release, a work in progress.
 - Inventory-style screens for the Smelter, Charcoal Kiln, Blast Furnace and Eitr Refinery, with Input, Coal and Output rows (the Refinery has a Softtissue box, a Sap box and a main window).
 - Light and Douse button with a status line. Machines start unlit and douse themselves when they run dry.
