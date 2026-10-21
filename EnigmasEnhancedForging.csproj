@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Classic (non-SDK) project file, same setup as Enigma's Item Salvager: Visual Studio + .NET Framework 4.8 targeting pack. -->
+<Project ToolsVersion="Current" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+
+  <!-- Paths on this computer. Edit these if Valheim or r2modman live somewhere else. -->
+  <PropertyGroup>
+    <ValheimPath>C:\Program Files (x86)\Steam\steamapps\common\Valheim</ValheimPath>
+    <ManagedPath>$(ValheimPath)\valheim_Data\Managed</ManagedPath>
+    <BepInExCorePath>$(MSBuildProjectDirectory)\libs</BepInExCorePath>
+    <ProfilesRoot>$(APPDATA)\r2modmanPlus-local\Valheim\profiles</ProfilesRoot>
+    <!-- The ONLY profile a build is copied into. Never touches Valheim Modded. -->
+    <TestProfile>Mod Preview</TestProfile>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B7E41D58-92C3-4A6F-8D15-0E3F7A9C2B64}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EnigmasEnhancedForging</RootNamespace>
+    <AssemblyName>EnigmasEnhancedForging</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <LangVersion>latest</LangVersion>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>embedded</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;DEV</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>embedded</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="BepInEx">
+      <HintPath>$(BepInExCorePath)\BepInEx.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(BepInExCorePath)\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="assembly_valheim">
+      <HintPath>$(ManagedPath)\assembly_valheim.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="assembly_utils">
+      <HintPath>$(ManagedPath)\assembly_utils.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Jotunn">
+      <HintPath>$(ProfilesRoot)\$(TestProfile)\BepInEx\plugins\ValheimModding-Jotunn\Jotunn.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="assembly_guiutils">
+      <HintPath>$(ManagedPath)\assembly_guiutils.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(ManagedPath)\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(ManagedPath)\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>$(ManagedPath)\UnityEngine.AudioModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>$(ManagedPath)\UnityEngine.AnimationModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>$(ManagedPath)\UnityEngine.ParticleSystemModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>$(ManagedPath)\UnityEngine.PhysicsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>$(ManagedPath)\UnityEngine.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>$(ManagedPath)\Unity.TextMeshPro.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Plugin.cs" />
+    <Compile Include="ForgeDump.cs" />
+    <Compile Include="ArtDump.cs" />
+    <Compile Include="SpriteDump.cs" />
+    <Compile Include="SoundDump.cs" />
+    <Compile Include="StationConfig.cs" />
+    <Compile Include="StationContainer.cs" />
+    <Compile Include="StationPatches.cs" />
+    <Compile Include="SalvagerCompat.cs" />
+    <Compile Include="SilverScrap.cs" />
+    <Compile Include="FlametalScrap.cs" />
+    <Compile Include="TinScrap.cs" />
+  </ItemGroup>
+
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+
+  <!-- After each build, copy the DLL into the Mod Preview profile only. The folder is created if missing. -->
+  <Target Name="CopyToTestProfile" AfterTargets="Build">
+    <PropertyGroup>
+      <PreviewPluginDir>$(ProfilesRoot)\$(TestProfile)\BepInEx\plugins\EnigmaPrime-Enigmas_Enhanced_Forging</PreviewPluginDir>
+    </PropertyGroup>
+    <MakeDir Directories="$(PreviewPluginDir)" Condition="Exists('$(ProfilesRoot)\$(TestProfile)')" />
+    <Copy Condition="Exists('$(ProfilesRoot)\$(TestProfile)')" SourceFiles="$(TargetPath)" DestinationFolder="$(PreviewPluginDir)" />
+    <Message Importance="high" Condition="Exists('$(ProfilesRoot)\$(TestProfile)')" Text="Enhanced Forging DLL copied to: $(PreviewPluginDir)" />
+    <Warning Condition="!Exists('$(ProfilesRoot)\$(TestProfile)')" Text="Built, but profile '$(TestProfile)' was not found under $(ProfilesRoot). Check the TestProfile and ProfilesRoot paths at the top of this file." />
+  </Target>
+</Project>

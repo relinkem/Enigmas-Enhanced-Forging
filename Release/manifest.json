@@ -1,0 +1,10 @@
+{
+  "name": "Enigmas_Enhanced_Forging",
+  "version_number": "0.0.1",
+  "website_url": "https://github.com/relinkem/Enigmas-Enhanced-Forging",
+  "description": "Smelters, kilns and the Eitr refinery become walk-away machines with inventory screens, a Light button, cool-down and winding animations. Work in progress.",
+  "dependencies": [
+    "denikson-BepInExPack_Valheim-5.4.2351",
+    "ValheimModding-Jotunn-2.30.2"
+  ]
+}
