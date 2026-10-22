@@ -29,6 +29,7 @@ namespace EnigmasEnhancedForging
         public static ConfigEntry<bool> FinishBubbling;
         public static ConfigEntry<bool> FinishCookingDone;
         public static ConfigEntry<int> BronzeOutput;
+        public static ConfigEntry<bool> RemoveForgeBronzeRecipe;
         public static ConfigEntry<int> RefineryInputSlotMax;
         public static ConfigEntry<int> RefineryFuelSlotMax;
         public static ConfigEntry<float> RefinerySeconds;
@@ -106,6 +107,8 @@ namespace EnigmasEnhancedForging
                 new ConfigDescription("Coal used to melt one scrap.", coal));
             BarSeconds = cfg.Bind("Smelting", "BarSeconds", 10f,
                 new ConfigDescription("Seconds to alloy one bar into Bronze (used by the Bronze run).", secs));
+            RemoveForgeBronzeRecipe = cfg.Bind("Smelting", "RemoveForgeBronzeRecipe", true,
+                "Remove the vanilla Forge crafting recipes for Bronze, so Bronze can only be made in the Smelter. Needs a game restart to change.");
             BronzeOutput = cfg.Bind("Smelting", "BronzeOutput", 3,
                 new ConfigDescription("Bronze bars made by one Bronze run (2 copper-family items plus 1 tin-family item). The cost is the same whatever you pick; only the yield changes.",
                     new AcceptableValueRange<int>(1, 3)));

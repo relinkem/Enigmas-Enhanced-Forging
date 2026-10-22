@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.1
+- Bronze can now only be made in the Smelter. The Forge's own Bronze crafting recipes are removed. Turn this off with the `RemoveForgeBronzeRecipe` setting (needs a game restart).
+- Fixed a harmless "font asset not found" warning in the log each time a station window opened.
+
 ## 0.1.0
 First public release, a work in progress.
 - Inventory-style screens for the Smelter, Charcoal Kiln, Blast Furnace and Eitr Refinery, with Input, Coal and Output rows (the Refinery has a Softtissue box, a Sap box and a main window).

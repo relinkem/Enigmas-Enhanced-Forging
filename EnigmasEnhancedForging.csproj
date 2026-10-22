@@ -115,6 +115,7 @@
     <Compile Include="StationConfig.cs" />
     <Compile Include="StationContainer.cs" />
     <Compile Include="StationPatches.cs" />
+    <Compile Include="BronzeRecipe.cs" />
     <Compile Include="SalvagerCompat.cs" />
     <Compile Include="SilverScrap.cs" />
     <Compile Include="FlametalScrap.cs" />

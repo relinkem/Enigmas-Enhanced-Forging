@@ -841,6 +841,9 @@ namespace EnigmasEnhancedForging
                 if (row == StationContainer.RowInput && view == StationContainer.ViewMode.Main)
                 {
                     var go = new GameObject("EP_Status", typeof(RectTransform));
+                    // Inactive while the text component is added and given the game's font, so TextMeshPro does not
+                    // log "LiberationSans SDF font asset not found" when it wakes up with no font yet.
+                    go.SetActive(false);
                     var srt = (RectTransform)go.transform;
                     srt.SetParent(prt, false);
                     srt.anchorMin = frt.anchorMin;
@@ -856,6 +859,7 @@ namespace EnigmasEnhancedForging
                     tmp.raycastTarget = false;
                     tmp.enableWordWrapping = false;
                     tmp.text = "";
+                    go.SetActive(true);
 
                     // Start / Stop button at the right end, above the status line: a copy of the Take All button so it
                     // looks like the game's own.

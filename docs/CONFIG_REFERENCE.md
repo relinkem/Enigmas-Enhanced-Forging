@@ -22,6 +22,7 @@ Settings are written to `BepInEx/config/EnigmaPrime.EnigmasEnhancedForging.cfg` 
 | BarSeconds | 10 | Seconds to alloy one bar into Bronze. |
 | BarCoal | 0.6667 | Coal used to alloy one bar into Bronze. |
 | BronzeOutput | 3 | Bronze bars made by one Bronze run (2 copper items plus 1 tin item). The cost is for the 3 metals melted, whatever the output. |
+| RemoveForgeBronzeRecipe | true | Remove the vanilla Forge crafting recipes for Bronze, so Bronze can only be made in the Smelter. Needs a game restart. |
 | CoolDownSeconds | 20 | While a machine works, and for this many seconds after it stops, everything inside is locked. |
 
 ## Refinery

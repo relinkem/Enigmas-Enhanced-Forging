@@ -38,7 +38,7 @@ The main window shows everything and takes only the Eitr out. Click the top of t
 - **Walk-away loads.** A full load of coal and ore keeps a smelter busy for about an hour without you touching it.
 - **Light and Douse.** Machines start unlit. Press Light to start, Douse to stop. A status line tells you why a machine will not start, for example when the coal runs short.
 - **Cool-down lock.** While a machine is working, and for 20 seconds after it stops, you cannot take anything out. Adding is always allowed. The fire and glow fade in and out with the heat.
-- **Bronze in one run.** Put two copper items and one tin item in the Smelter and get 3 Bronze. Made from ore, that run costs 90 seconds and 6 coal (vanilla needs 270 seconds and 18 coal for the same 3 Bronze).
+- **Bronze in one run.** Put two copper items and one tin item in the Smelter and get 3 Bronze. Made from ore, that run costs 90 seconds and 6 coal (vanilla needs 270 seconds and 18 coal for the same 3 Bronze). Bronze can only be made in the Smelter: the Forge's own Bronze recipes are removed (you can turn that off in the settings).
 - **Scrap is cheaper to melt.** Scrap melts in 15 seconds for 1 coal, bars alloy in 10 seconds, ore stays at the vanilla 30 seconds for 2 coal.
 - **New scrap items.** Tin Scrap, Silver Scrap and Flametal Scrap, smelted back into bars. With [Enigma's Item Salvager](https://thunderstore.io/c/valheim/p/Enigma_Prime/Enigmas_Item_Salvager/) installed, salvaged metal comes back as scrap that you remelt.
 - **Winding animations.** Blast Furnace wheels and the Refinery's grinding speed up when lit, and slow down over the cool-down, finishing one last gentle turn before they stop.
