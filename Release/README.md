@@ -2,9 +2,9 @@
 
 *Load the furnace, press Light, and go do something else.*
 
-Smelters, kilns and the Eitr Refinery turn into machines you fill up and walk away from. Each one gets an inventory-style screen with rows for input, fuel and output, a Light and Douse button, a cool-down before you can reach inside, and wheels and gears that wind up and slow down instead of snapping on and off. Everyone on the server needs this mod.
+Smelters, kilns (including the Frost Kiln) and the Eitr Refinery turn into machines you fill up and walk away from. Each one gets an inventory-style screen with rows for input, fuel and output, a Light and Douse button, a cool-down before you can reach inside, and wheels and gears that wind up and slow down instead of snapping on and off. Everyone on the server needs this mod.
 
-**This is an early, work in progress release.** The Smelter, Charcoal Kiln, Blast Furnace and Eitr Refinery are done. The Spinning Wheel, Windmill and Frost Kiln still work like vanilla and will be added in later versions.
+**This is an early, work in progress release.** The Smelter, Charcoal Kiln, Blast Furnace, Frost Kiln and Eitr Refinery are done. The Spinning Wheel and Windmill still work like vanilla for now.
 
 ![A Blast Furnace, a Smelter and a Charcoal Kiln standing together in a meadow](https://raw.githubusercontent.com/relinkem/Enigmas-Enhanced-Forging/main/images/hero.jpg)
 
@@ -34,13 +34,14 @@ The main window shows everything and takes only the Eitr out. Click the top of t
 
 ## Features
 
-- **Inventory screens instead of switches.** Open a Smelter, Charcoal Kiln or Blast Furnace and you get a grid with an Input row, a Coal row and an Output row. The Eitr Refinery gets a Softtissue box, a Sap box and a main window for the Eitr.
+- **Inventory screens instead of switches.** Open a Smelter, Charcoal Kiln or Blast Furnace and you get a grid with an Input row, a Coal row and an Output row. The Frost Kiln takes Ice in and gives Frozen Fuel out, with a cold blue glow. The Eitr Refinery gets a Softtissue box, a Sap box and a main window for the Eitr.
 - **Walk-away loads.** A full load of coal and ore keeps a smelter busy for about an hour without you touching it.
-- **Light and Douse.** Machines start unlit. Press Light to start, Douse to stop. A status line tells you why a machine will not start, for example when the coal runs short.
+- **Light and Douse.** Machines start unlit. Press Light to start, Douse to stop. The Light button is greyed out while there is nothing to start, and a status line tells you why, for example when the coal runs short.
 - **Cool-down lock.** While a machine is working, and for 20 seconds after it stops, you cannot take anything out. Adding is always allowed. The fire and glow fade in and out with the heat.
 - **Bronze in one run.** Put two copper items and one tin item in the Smelter and get 3 Bronze. Made from ore, that run costs 90 seconds and 6 coal (vanilla needs 270 seconds and 18 coal for the same 3 Bronze). Bronze can only be made in the Smelter: the Forge's own Bronze recipes are removed (you can turn that off in the settings).
 - **Scrap is cheaper to melt.** Scrap melts in 15 seconds for 1 coal, bars alloy in 10 seconds, ore stays at the vanilla 30 seconds for 2 coal.
 - **New scrap items.** Tin Scrap, Silver Scrap and Flametal Scrap, smelted back into bars. With [Enigma's Item Salvager](https://thunderstore.io/c/valheim/p/Enigma_Prime/Enigmas_Item_Salvager/) installed, salvaged metal comes back as scrap that you remelt.
+- **Higher build costs.** One machine now does the work of several, so the Smelter, Charcoal Kiln, Blast Furnace and Frost Kiln cost 3 times vanilla to build, and the Eitr Refinery 2 times. Each multiplier can be changed in the settings (restart needed). It applies to new builds only.
 - **Winding animations.** Blast Furnace wheels and the Refinery's grinding speed up when lit, and slow down over the cool-down, finishing one last gentle turn before they stop.
 - **Finish sounds.** A slowed bubbling when a bar comes out, and a hammer thud for the Refinery. Volume and pitch are adjustable.
 - **Works with Item Salvager.** On a station screen you get Take and Stack, and the Sort and Drop buttons are hidden. Without Item Salvager you get the vanilla buttons.
@@ -61,7 +62,7 @@ To change settings in game, install Configuration Manager and press F1.
 
 ## Settings
 
-Settings are in `BepInEx/config/EnigmaPrime.EnigmasEnhancedForging.cfg` after the first run. Smelting costs, slot sizes, cool-down, animation timing and sounds can all be changed. Full list:
+Settings are in `BepInEx/config/EnigmaPrime.EnigmasEnhancedForging.cfg` after the first run. Smelting costs, build costs, slot sizes, cool-down, animation timing and sounds can all be changed. Full list:
 
 [docs/CONFIG_REFERENCE.md](https://github.com/relinkem/Enigmas-Enhanced-Forging/blob/main/docs/CONFIG_REFERENCE.md)
 
@@ -72,13 +73,13 @@ Everyone on the server needs the mod, on the same major and minor version.
 ## Compatibility
 
 - Works with Enigma's Item Salvager (optional). Salvager is loaded first when both are installed, and its Take and Stack buttons are used on the station screens.
-- Only the Smelter, Blast Furnace, Charcoal Kiln and Eitr Refinery are changed. Other mods' smelters are left alone.
+- Only the Smelter, Blast Furnace, Charcoal Kiln, Frost Kiln and Eitr Refinery are changed. Other mods' smelters are left alone.
 
 ## Known issues
 
-- Work in progress: the Spinning Wheel, Windmill and Frost Kiln are not converted yet.
+- Work in progress: the Spinning Wheel and Windmill are not converted yet.
 - Multiplayer: the Refinery's add effects and screen glow are not synced to other players.
-- To be safe, empty your smelters and refinery before installing on an existing world.
+- To be safe, empty your smelters, kilns and refinery before installing on an existing world.
 - Controller support is built in through the game's own inventory screen but untested. Please report problems.
 - The new scrap items reuse the look of vanilla Copper Scrap for now.
 
@@ -90,7 +91,7 @@ If you like the mod and want to say thanks, you can:<br>[buy me a coffee on Ko-f
 
 <br clear="left">
 
-Bug reports and ideas are just as welcome. Open an issue on [GitHub](https://github.com/relinkem/Enigmas-Enhanced-Forging/issues) and include your BepInEx log (`LogOutput.log`) and, if it is a settings problem, your config file.
+Bug reports and ideas are just as welcome. Open an issue on [GitHub](https://github.com/relinkem/Enigmas-Enhanced-Forging/issues) and include your BepInEx log (`LogOutput.log`) and, if it is a settings problem, your config file. Ideas and suggestions are also welcome in the comments on my [Ko-fi page](https://ko-fi.com/enigmaprime).
 
 ## More mods by Enigma Prime
 
