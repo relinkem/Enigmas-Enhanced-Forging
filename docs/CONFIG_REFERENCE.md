@@ -58,3 +58,16 @@ Settings are written to `BepInEx/config/EnigmaPrime.EnigmasEnhancedForging.cfg` 
 | FinishHissPrefab | sfx_kiln_produce | Extra sound prefab played with the bubbling (a steam puff). Leave empty for none. |
 | FinishBubbling | true | Play the cauldron bubbling when a bar comes out. |
 | FinishCookingDone | true | Play the "done" sound when a bar comes out. |
+
+
+## Build cost
+
+Multipliers on every ingredient of the vanilla build cost. 1 is the game's own cost. Range 1 to 10. All need a game restart, and only affect machines built after the change.
+
+| Setting | Default | What it does |
+|---|---|---|
+| SmelterCostMultiplier | 3 | Multiplies the Smelter's build cost. |
+| CharcoalKilnCostMultiplier | 3 | Multiplies the Charcoal Kiln's build cost. |
+| BlastFurnaceCostMultiplier | 3 | Multiplies the Blast Furnace's build cost. |
+| EitrRefineryCostMultiplier | 2 | Multiplies the Eitr Refinery's build cost. |
+| FrostKilnCostMultiplier | 3 | Multiplies the Frost Kiln's build cost. |
